@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #3b3b3b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+
+h1 {
+    font-family: "Agu Display", serif;
+    color: transparent;
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(270deg, #7edaf8, #bedffa, #f5f5f5);
+    background-size: 400% 400%;
+    background-clip: text;
+    animation: gradientShift 6s ease infinite;
+}
+
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+h3 {
+    color: rgb(197, 197, 197);
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.img {
+    mix-blend-mode: multiply;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 0px 10px;
+    width: 100px;
+    height: 150px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 20px 0px 20px 10px;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.card.empty {
+    background: #c3c6ce;
+}
+
+.card span {
+    font-family: "Agu Display", serif;
+    font-size: 70px;
+    margin-left: 40px;
+}
+
+.card img {
+    height: auto;
+    width: 60px;
+    margin-right: 40px;
+}
+
+.card.shield {
+    color: #7edaf8;
+}
+
+.card.monster {
+    color: #f87ef2;
+}
+
+.card.heal {
+    color: #f87e7e;
+}
+
+.card.shield:hover {
+    border-color: #7edaf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card.monster:hover {
+    border-color: #f87ef2;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card.heal:hover {
+    border-color: #f87e7e;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
